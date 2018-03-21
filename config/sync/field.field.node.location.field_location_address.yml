@@ -1,0 +1,52 @@
+uuid: a5dec1ec-a92d-430a-9d35-a9b0d9be8bc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location_address
+    - node.type.location
+  module:
+    - address
+    - geocoder_field
+third_party_settings:
+  geocoder_field:
+    method: none
+    weight: '0'
+    geocode_field: body
+    reverse_geocode_field: {  }
+    hidden: 0
+    disabled: 0
+    plugins: {  }
+    dumper: geojson
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+id: node.location.field_location_address
+field_name: field_location_address
+entity_type: node
+bundle: location
+label: 'Location Address'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries:
+    US: US
+  fields:
+    administrativeArea: administrativeArea
+    locality: locality
+    dependentLocality: dependentLocality
+    postalCode: postalCode
+    sortingCode: sortingCode
+    addressLine1: addressLine1
+    addressLine2: addressLine2
+    organization: organization
+    givenName: givenName
+    additionalName: additionalName
+    familyName: familyName
+  langcode_override: ''
+field_type: address

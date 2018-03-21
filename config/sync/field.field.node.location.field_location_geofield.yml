@@ -1,0 +1,42 @@
+uuid: 9f2ca916-35a5-4d05-85a4-40946f1cae4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location_geofield
+    - node.type.location
+  module:
+    - geocoder_field
+    - geofield
+third_party_settings:
+  geocoder_field:
+    method: source
+    weight: '0'
+    geocode_field: field_location_address
+    reverse_geocode_field: {  }
+    hidden: 0
+    disabled: 0
+    plugins:
+      - freegeoip
+      - geoip
+      - googlemaps
+      - yandex
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+id: node.location.field_location_geofield
+field_name: field_location_geofield
+entity_type: node
+bundle: location
+label: 'Location Geofield'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  backend: geofield_backend_default
+field_type: geofield

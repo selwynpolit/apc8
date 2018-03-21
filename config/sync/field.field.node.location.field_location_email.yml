@@ -1,0 +1,19 @@
+uuid: 6b73d6af-6ba7-4a45-8aa8-577af1cb7f02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location_email
+    - node.type.location
+id: node.location.field_location_email
+field_name: field_location_email
+entity_type: node
+bundle: location
+label: 'Location Email'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

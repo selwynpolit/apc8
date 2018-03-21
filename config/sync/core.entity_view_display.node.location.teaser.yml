@@ -1,0 +1,53 @@
+uuid: c74e0ea3-577e-496f-b28a-40f805f11463
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.location.body
+    - node.type.location
+  module:
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          20ed1869-0b26-429a-9809-1c84e2c4d8db:
+            uuid: 20ed1869-0b26-429a-9809-1c84e2c4d8db
+            region: content
+            configuration:
+              id: 'field_block:node:location:body'
+              label_display: ''
+              formatter:
+                label: hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+id: node.location.teaser
+targetEntityType: node
+bundle: location
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

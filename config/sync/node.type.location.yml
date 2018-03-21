@@ -1,0 +1,17 @@
+uuid: 17fda292-26e6-467c-b0f4-a3e7c64f98c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Location
+type: location
+description: 'A place where an event is held'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

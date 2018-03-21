@@ -1,0 +1,173 @@
+uuid: a23e7aef-eee0-413c-a784-7ae8335f32ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.location.body
+    - field.field.node.location.field_location_address
+    - field.field.node.location.field_location_email
+    - field.field.node.location.field_location_geofield
+    - field.field.node.location.field_location_image
+    - field.field.node.location.field_location_phone
+    - node.type.location
+  module:
+    - address
+    - geofield
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          c54fffb5-ff88-4c6b-b912-29c80a64a248:
+            uuid: c54fffb5-ff88-4c6b-b912-29c80a64a248
+            region: content
+            configuration:
+              id: 'field_block:node:location:body'
+              label_display: ''
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          e38fbb84-7ce0-4b9b-bc36-954fb8a8f5ff:
+            uuid: e38fbb84-7ce0-4b9b-bc36-954fb8a8f5ff
+            region: content
+            configuration:
+              id: 'field_block:node:location:field_location_address'
+              label_display: ''
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: address_default
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          bb2c2159-fa7b-40e4-9233-49b5bcdb54d0:
+            uuid: bb2c2159-fa7b-40e4-9233-49b5bcdb54d0
+            region: content
+            configuration:
+              id: 'field_block:node:location:field_location_geofield'
+              label_display: ''
+              formatter:
+                label: above
+                settings:
+                  output_format: wkt
+                third_party_settings: {  }
+                type: geofield_default
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 2
+          035ce932-1baa-445d-9c87-7a70ae57fcd4:
+            uuid: 035ce932-1baa-445d-9c87-7a70ae57fcd4
+            region: content
+            configuration:
+              id: 'field_block:node:location:field_location_image'
+              label_display: ''
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 3
+          0eb87ba1-9e23-4b91-a99a-c344f2055868:
+            uuid: 0eb87ba1-9e23-4b91-a99a-c344f2055868
+            region: content
+            configuration:
+              id: 'field_block:node:location:field_location_phone'
+              label_display: ''
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: basic_string
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 4
+          10be307a-7a14-4332-a01f-a2905de4f0f8:
+            uuid: 10be307a-7a14-4332-a01f-a2905de4f0f8
+            region: content
+            configuration:
+              id: 'field_block:node:location:field_location_email'
+              label_display: ''
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: basic_string
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 5
+id: node.location.default
+targetEntityType: node
+bundle: location
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_location_address:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_location_email:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_location_geofield:
+    weight: 103
+    label: above
+    settings:
+      output_format: wkt
+    third_party_settings: {  }
+    type: geofield_default
+    region: content
+  field_location_image:
+    type: entity_reference_entity_view
+    weight: 104
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_location_phone:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

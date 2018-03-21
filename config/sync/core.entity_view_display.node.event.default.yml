@@ -1,0 +1,113 @@
+uuid: 4c6a4144-9f9f-457d-b972-3ef5bea93737
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event.body
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_image
+    - node.type.event
+  module:
+    - datetime_range
+    - field_layout
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          d99d7cba-c01e-4ebc-8b58-8dc3a30c68e0:
+            uuid: d99d7cba-c01e-4ebc-8b58-8dc3a30c68e0
+            region: content
+            configuration:
+              id: 'field_block:node:event:body'
+              label_display: ''
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          f5625d5c-550e-4087-8f49-340bc25f466d:
+            uuid: f5625d5c-550e-4087-8f49-340bc25f466d
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_event_image'
+              label_display: ''
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          d3c9674a-f4b6-418f-9039-9656342fbe24:
+            uuid: d3c9674a-f4b6-418f-9039-9656342fbe24
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_event_date'
+              label_display: ''
+              formatter:
+                label: above
+                settings:
+                  separator: '-'
+                  format_type: medium
+                  timezone_override: ''
+                third_party_settings: {  }
+                type: daterange_default
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 2
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_event_date:
+    weight: 103
+    label: above
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_event_image:
+    type: entity_reference_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
